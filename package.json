@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "webpack-dev-server --inline --content-base public/ --history-api-fallback",
-    "start:prod": "webpack && node server.js",
-    "test": "webpack --config webpack/webpack.config.js && node server.js"
+    "start:dev": "webpack-dev-server --config webpack/webpack.config.js --inline --content-base client/ --history-api-fallback",
+    "start:prod": "npm run build:prod && nodemon server.js",
+    "clean": "rimraf public",
+    "build:prod": "npm run clean && webpack --config webpack/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,10 @@
     "babel-preset-react": "^6.5.0",
     "http-server": "^0.8.5",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "html-webpack-plugin": "^2.16.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "rimraf": "^2.5.2",
+    "nodemon": "^1.9.2"
   }
 }

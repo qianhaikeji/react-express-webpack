@@ -1,3 +1,28 @@
+'use strict';
+
+var express = require('express')
+var path = require('path')
+var compression = require('compression')
+
+var app = express()
+
+app.use(compression())
+
+// serve our static stuff like index.css
+app.use(express.static('public'))
+
+// send all requests to index.html so browserHistory works
+app.get('*', function (req, res) {
+  res.sendFile('index.html', {'root': './public/'})
+})
+
+module.exports = app;
+
+
+
+
+
+
 // import express from 'express'
 // import path from 'path'
 // import compression from 'compression'
@@ -41,23 +66,3 @@
 //     <script src="/bundle.js"></script>
 //    `
 // }
-
-'use strict';
-
-var express = require('express')
-var path = require('path')
-var compression = require('compression')
-
-var app = express()
-
-app.use(compression())
-
-// serve our static stuff like index.css
-app.use(express.static('public'))
-
-// send all requests to index.html so browserHistory works
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'))
-})
-
-module.exports = app;

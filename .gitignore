@@ -1,0 +1,8 @@
+.avoscloud/
+node_modules/
+npm-debug.log
+.DS_Store
+.DS_Store?
+*.swp
+._.DS_Store
+public/
