@@ -1,9 +1,10 @@
 var fs = require('fs')
 var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
 
-  entry: path.resolve(__dirname, 'server.js'),
+  entry: './server.js',
 
   output: {
     filename: 'server.bundle.js'
@@ -12,7 +13,7 @@ module.exports = {
   target: 'node',
 
   // keep node_module paths out of the bundle
-  externals: fs.readdirSync(path.resolve(__dirname, 'node_modules')).concat([
+  externals: fs.readdirSync('./node_modules').concat([
     'react-dom/server'
   ]).reduce(function (ext, mod) {
     ext[mod] = 'commonjs ' + mod
@@ -28,6 +29,14 @@ module.exports = {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
     ]
-  }
+  },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('server-render')
+      }
+    })
+  ],
 
 }

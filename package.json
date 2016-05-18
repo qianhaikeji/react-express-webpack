@@ -4,11 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "webpack-dev-server --config webpack/webpack.config.js --inline --content-base client/ --history-api-fallback",
-    "start:prod": "npm run build:prod && nodemon server.js",
-    "clean": "rimraf public",
-    "build:prod": "npm run clean && webpack --config webpack/webpack.config.js"
+    "start": "if-env NODE_ENV=production && npm run start:client:prod || npm run start:client:dev",
+    "start:client:dev": "webpack-dev-server --config webpack/webpack.config.js --inline --content-base client/ --history-api-fallback",
+    "start:client:prod": "npm run build:client && nodemon server.js",
+    "start:server": "npm run build:server && nodemon server.bundle.js",
+    "clean:client": "rimraf public",
+    "clean:server": "rimraf server.bundle.js",
+    "build:all": "npm run build:client && npm run build:server",
+    "build:client": "npm run clean:client && webpack --config webpack/webpack.config.js",
+    "build:server": "npm run clean:server && webpack --config webpack/webpack.server.config.js"
   },
   "author": "",
   "license": "ISC",
