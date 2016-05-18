@@ -1,5 +1,19 @@
 # react-express-webpack
 
+## directory
+```
+.
+├── README.md
+├── client           #react client code
+├── node_modules     
+├── package.json     
+├── public           #client public code
+├── server           #server code
+├── server.bundle.js #server render mode public code
+├── server.js        #server entry
+└── webpack          #webpack config
+```
+
 ## command
 开发模式
 ```
