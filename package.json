@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "express-react-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,9 +16,12 @@
     "compression": "^1.6.1",
     "express": "^4.13.4",
     "if-env": "^1.0.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.0",
+    "react-router-redux": "^4.0.4",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
@@ -31,6 +34,8 @@
     "html-webpack-plugin": "^2.16.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "css-loader": "^0.23.1",
     "nodemon": "^1.9.2"
   }
 }
