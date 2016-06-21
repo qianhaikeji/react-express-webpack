@@ -25,7 +25,10 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "react-router-redux": "^4.0.4",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "^1.0.0",
+    "immutable": "^3.8.1",
+    "fbjs": "^0.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

@@ -41,7 +41,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, exclude: /node_modules/, loader: extractCSS.extract('style-loader', 'css-loader') },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
+      { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
     ]
   }
 }
