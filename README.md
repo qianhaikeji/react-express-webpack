@@ -17,7 +17,27 @@
 └── webpack          #webpack config
 ```
 
+
+
+```
+client
+├── actions          
+├── components       #木偶组件
+├── constants
+├── containers       #智能组件
+├── index.html
+├── index.js
+├── index.prod.html
+├── reducers
+├── routes.js
+├── stores
+└── styles
+```
+
+
+
 ## command
+
 开发模式
 ```
 npm start
@@ -36,5 +56,8 @@ npm run start:server
 
 ## reference
 
-https://github.com/matthew-sun/blog/issues/18
+两篇简要介绍react + redux 的文章
+
+1. https://github.com/matthew-sun/blog/issues/19
+2. https://github.com/matthew-sun/blog/issues/18
 
