@@ -23,6 +23,9 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
           compress: { warnings: false }
     }),
+    new webpack.DefinePlugin({  
+        __DEBUG__: false
+    }),
     extractCSS,
     new HtmlWebpackPlugin({
       title: "react-express-webpack",
@@ -35,6 +38,9 @@ module.exports = {
       }
     })
   ] : [
+    new webpack.DefinePlugin({  
+        __DEBUG__: true
+    }),
     extractCSS
   ],
 

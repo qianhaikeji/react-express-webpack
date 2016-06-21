@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:client:prod || npm run start:client:dev",
-    "start:client:dev": "webpack-dev-server --config webpack/webpack.config.js --inline --content-base client/ --history-api-fallback",
+    "start:client:dev": "webpack-dev-server --config webpack/webpack.config.js --inline --content-base client/ --port 9000 --history-api-fallback",
     "start:client:prod": "npm run build:client && nodemon server.js",
     "start:server": "npm run build:server && nodemon server.bundle.js",
     "clean:client": "rimraf public",
@@ -19,16 +19,7 @@
   "dependencies": {
     "compression": "^1.6.1",
     "express": "^4.13.4",
-    "if-env": "^1.0.0",
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.4.0",
-    "react-router-redux": "^4.0.4",
-    "redux": "^3.5.2",
-    "redux-thunk": "^1.0.0",
-    "immutable": "^3.8.1",
-    "fbjs": "^0.4.0"
+    "if-env": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
@@ -43,6 +34,18 @@
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
     "css-loader": "^0.23.1",
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "redux-devtools": "^3.2.0",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.0",
+    "react-router-redux": "^4.0.4",
+    "redux": "^3.5.2",
+    "redux-thunk": "^1.0.0",
+    "immutable": "^3.8.1",
+    "fbjs": "^0.4.0"
   }
 }

@@ -1,6 +1,9 @@
+[TOC]
+
 # react-express-webpack
 
 ## directory
+
 ```
 .
 ├── README.md
@@ -29,3 +32,9 @@ NODE_ENV=production npm start
 ```
 npm run start:server
 ```
+
+
+## reference
+
+https://github.com/matthew-sun/blog/issues/18
+
