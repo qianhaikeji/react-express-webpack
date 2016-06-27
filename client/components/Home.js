@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Rate } from 'antd'
 
-export default React.createClass({
+export default class Home extends Component{
   render() {
     return (
         <div>
@@ -10,4 +10,4 @@ export default React.createClass({
         </div>
     );
   }
-})
+}

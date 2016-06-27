@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router'
+import { Route, IndexRoute, DefaultRoute } from 'react-router'
 import App from './containers/App'
 import About from './components/About'
 import Repos from './components/Repos'
