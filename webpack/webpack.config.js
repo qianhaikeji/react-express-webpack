@@ -7,7 +7,7 @@ var extractCSS = new ExtractTextPlugin('[hash:8].style.css', { allChunks: true }
 
 module.exports = {
   entry: process.env.NODE_ENV === 'production' ? {
-    vendor: ['react','react-router'],
+    vendor: ['antd','react','react-router'],
     bundle: './client/index.js'
   } : './client/index.js',
 
@@ -26,7 +26,7 @@ module.exports = {
     new webpack.DefinePlugin({  
         __DEBUG__: false
     }),
-    extractCSS,
+    new ExtractTextPlugin('[hash:8].style.css', { allChunks: true }),
     new HtmlWebpackPlugin({
       title: "react-express-webpack",
       template: path.join(__dirname,'../client/index.prod.html'),
@@ -41,12 +41,12 @@ module.exports = {
     new webpack.DefinePlugin({  
         __DEBUG__: true
     }),
-    extractCSS
+    new ExtractTextPlugin('style.css', { allChunks: true })
   ],
 
   module: {
     loaders: [
-      { test: /\.css$/, exclude: /node_modules/, loader: extractCSS.extract('style-loader', 'css-loader') },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
     ]
   }
