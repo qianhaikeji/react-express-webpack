@@ -21,10 +21,13 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
-          compress: { warnings: false }
+      compress: { warnings: false }
     }),
     new webpack.DefinePlugin({  
-        __DEBUG__: false
+      __DEBUG__: false,
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
     }),
     new ExtractTextPlugin('[hash:8].style.css', { allChunks: true }),
     new HtmlWebpackPlugin({
@@ -49,5 +52,9 @@ module.exports = {
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
     ]
+  },
+
+  babel: {
+    "plugins": [["antd"]]
   }
 }

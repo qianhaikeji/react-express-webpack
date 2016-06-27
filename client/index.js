@@ -4,9 +4,9 @@ import { Router, browserHistory } from 'react-router'
 import { Provider } from 'react-redux'
 import configureStore from './stores/configureStore'
 import routes from './routes'
+import DevTools from './containers/DevTools'
 import './styles/public.css'
 import 'antd/dist/antd.css'
-import DevTools from './containers/DevTools'
 
 const store = configureStore();
 
