@@ -1,0 +1,15 @@
+.topnav {
+  max-width: 1200px;
+  height: 48px;
+  margin: auto;
+}
+
+.topnav .brand {
+  line-height: 48px;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}

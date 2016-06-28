@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import { Rate } from 'antd'
 
 export default class Home extends Component{
   render() {
     return (
-        <div>
-            Home
-            <Rate />
+        <div class="home-page">
+            <div>section</div>
+            <div>section</div>
+            <div>section</div>
         </div>
     );
   }

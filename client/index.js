@@ -6,6 +6,7 @@ import configureStore from './stores/configureStore'
 import routes from './routes'
 import DevTools from './containers/DevTools'
 import './styles/public.css'
+import './styles/base.css'
 import 'antd/dist/antd.css'
 
 const store = configureStore();

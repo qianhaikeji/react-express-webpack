@@ -1,0 +1,69 @@
+/*--------------------------------
+  通用的css样式，可以在其它项目中使用
+---------------------------------*/
+
+body {
+  font-family: "helvetica neue",arial,sans-serif;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 0px !important;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.dis-table {
+  display: table;
+  width: 100%;
+}
+
+.dis-table-cell {
+  display: table-cell;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear-left {
+  clear: left;
+}
