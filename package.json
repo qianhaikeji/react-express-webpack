@@ -19,7 +19,8 @@
   "dependencies": {
     "compression": "^1.6.1",
     "express": "^4.13.4",
-    "if-env": "^1.0.0"
+    "if-env": "^1.0.0",
+    "react-parallax": "^0.4.3"
   },
   "devDependencies": {
     "antd": "^1.6.1",

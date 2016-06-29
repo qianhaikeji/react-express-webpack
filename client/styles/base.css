@@ -1,7 +1,12 @@
+.nav {
+  background-color: white;
+}
+
 .topnav {
   max-width: 1200px;
   height: 48px;
   margin: auto;
+  background-color: white;
 }
 
 .topnav .brand {
@@ -10,6 +15,26 @@
 }
 
 .container {
-  max-width: 1200px;
   margin: auto;
+}
+
+.home-page .section {
+  height: 400px; 
+  margin: auto;
+}
+
+.home-page .section.first {
+  height: 500px;
+  padding-top: 200px;
+  color: white;
+  text-align: center;
+}
+
+.home-page .section.first .title {
+  font-size: 30px;
+}
+
+.home-page .section.first .subtitle {
+  margin-top: 10px;
+  font-size: 20px;
 }

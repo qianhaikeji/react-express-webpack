@@ -13,12 +13,16 @@ export default class App extends Component{
   render() {
     return (
       <div>
-        <Affix className="topnav">
-          <IndexLink to="/" className="float-left brand">Shallow Sea Team</IndexLink>
-          <div className="float-right">
-            <Menu selectedKeys={[this.props.location.pathname]} mode="horizontal">
-              <Menu.Item key="/about"><Link to="/about">关于</Link></Menu.Item>
-            </Menu>
+        <Affix>
+          <div className="nav">
+            <div className="topnav">
+              <IndexLink to="/" className="float-left brand">Shallow Sea Team</IndexLink>
+              <div className="float-right">
+                <Menu selectedKeys={[this.props.location.pathname]} mode="horizontal">
+                  <Menu.Item key="/about"><Link to="/about">关于</Link></Menu.Item>
+                </Menu>
+              </div>
+            </div>
           </div>
         </Affix>
         <div className="clear-left container">
